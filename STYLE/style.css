@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Libre+Franklin:ital,wght@0,300;0,600;0,700;1,300;1,600;1,700&family=Outfit:wght@300;400;600&display=swap");
+:root {
+  --a: hsl(215, 51%, 70%);
+  --a2: hsl(178, 100%, 50%);
+  --a3: hsl(217, 54%, 11%);
+  --a4: hsl(216, 50%, 16%);
+  --a5: hsl(215, 32%, 27%);
+  --a6: hsl(0, 0%, 100%);
+}
+html {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+input {
+  line-height: normal;
+}
+label,
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+/* main============================================================ */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--a3);
+  font-family: "Outfit", sans-serif;
+}
+
+.container {
+  max-width: 300px;
+  margin: 2rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--a4);
+  padding: 1.2rem;
+}
+
+.header .header-img {
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.header-img .view {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: hsl(178, 100%, 50%, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 100%;
+  transition: top 0.5s ease;
+  cursor: pointer;
+}
+
+.header-img:hover > .view {
+  top: 0%;
+}
+
+.header .header-info {
+  margin: 1rem 0;
+  border-bottom: solid 0.8px hsl(0, 0%, 100%, 0.4);
+  color: white;
+  font-weight: bolder;
+  font-size: 1rem;
+}
+
+.header .header-info h2:hover {
+  color: aqua;
+  cursor: pointer;
+}
+
+.header-info p {
+  font-weight: 300;
+  opacity: 0.8;
+  margin-top: 1rem;
+  line-height: 1.4;
+}
+
+.header-info2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 1rem;
+}
+
+.info2-eth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--a2);
+}
+
+.info2-day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info2-day span {
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.footer .footer-img {
+  max-width: 40px;
+  max-height: 40px;
+  border: 1px solid white;
+
+  border-radius: 100px;
+}
+
+.footer-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer p {
+  color: hsl(0, 0%, 100%, 0.8);
+  font-weight: 300;
+}
+
+.footer strong:hover {
+  color: aqua;
+  cursor: pointer;
+}
+@media screen and (max-width: 474px) {
+  .header-img .view {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: hsl(178, 100%, 50%, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  .header-img:hover > .view {
+    opacity: 1;
+  }
+}
